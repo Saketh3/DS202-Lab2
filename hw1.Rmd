@@ -1,0 +1,81 @@
+---
+title: 'Homework #1'
+author: Saketh Jonnadula
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This homework is more or less a tutorial that helps you set up the coding environment used in this course, and familiarizes you with the format of the assignment submission. 
+As a pre-requisite of this homework, first install R, and then the RStudio (the free version of Rstudio Desktop). 
+
+Please respond to all questions. If the question asks you to do something on your laptop and you have finished that, just say "Done". 
+
+1. Create a folder named `ds202_hw1`, and **either** create an RMarkDown file `hw1.Rmd` under this folder **or** move the provided template into this folder. `hw1.Rmd` will include your solutions. The file and folder names are *case-sensitive*, which means `hw1.Rmd` and `HW1.rmd` are different. *It is crucial to follow the exact folder structure and file names* in this course, so that your homework can be reproduced. The correct folder structure is
+
+    ```
+    ds202_hw1
+    |-- hw1.Rmd
+    |-- hw1.html (generated after knitting)
+    ```
+    
+    Answer: Done (Note that the start of your answer on the next line must be indented. In other words, don't remove the leading spaces.)
+
+2. Write your name in the YAML of your homework `Rmd` file.
+
+    Answer: Done
+
+3. Write a paragraph to introduce yourself. Set your name in bold font and your major in italic. 
+
+    Answer: My name is **Saketh Jonnadula** I am a Sophmore and I major in *Software Engineering*
+  
+4. Write a paragraph describing a job that you think is related to data science. Include a hyperlink and an image. Make sure your answer is in a nice format to read. 
+
+    Answer: I think that a job in data science is someone who takes data from a company and suggestes ideas to the company in where to move forward based on what the data shows. If the data shows that a certain product isnt doing well then the data scientist or analysits tells the company to not use that product because it is hurting the company. ![Image of a data Analyist](data:image/jpeg;base64,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)
+    
+    [Link of description of data analyist/scientist](https://www.rasmussen.edu/degrees/technology/blog/what-does-a-data-analyst-do/)
+  
+5. What data topic will you be most interested in? (Optional) Provide a source of such dataset if you have.
+
+    Answer: I am interested in sports and video games so data sets about those topics make me excited and wonder what I can bring out from those data sets.
+  
+6. To check that your R and Rstudio installation is correct, find the version of R by entering `version` into the R console. Include this command into a R code trunk in your solution `Rmd` file to have it automatically printed in the knitted html file. 
+
+    Answer: 
+    ```{r version}
+    version
+    ```
+  
+7. Install git. 
+    - If you are on Windows: 
+        a. Install [Git for Windows](https://gitforwindows.org/). In the coming weeks we will use the Git Bash (but not the Git GUI). 
+        b. After installation, set up Rstudio to use Git bash as the shell for the Terminal: Open RStudio, click Tools--Global Options--Terminal; under **Shells**, select Git Bash; click OK. 
+        c. In the main menu of RStudio: click Tools--Terminal--New Terminal. If you have a `$` before your prompt, then you should be good to go.
+    - If you are on Linux or macOS, Git has probably been installed by default, so you do not need to install anything. Just click the Terminal tab (above the R Console).
+
+    Answer: Done
+  
+8. What is the version of your Git? To find out, go to the Terminal tab in RStudio (right to the Console tab), and type in the following command. If it works, this shows that the setup of your terminal and Git is correct. 
+<!-- Then explore the bash command line and Git. -->
+
+    ```
+    git --version
+    ```
+
+    Answer: git version 2.23.0
+  
+9. Configure your git username and user email by modifying and entering the following commands into the terminal
+
+    ```
+    git config --global user.name "your first and last name"
+    git config --global user.email "yourEmail"
+    ```
+
+    Answer: Done
+  
+
+10. Register a [GitHub](https://www.github.com) account. What is your username?
+
+    Answer: My github username is **Saketh3**
