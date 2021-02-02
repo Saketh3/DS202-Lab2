@@ -1,0 +1,10 @@
+Daryl Kay
+Username: Daryl-Kay
+
+Last commit (master)
+-added the rmd and html files
+-ID - ee6242acd1c76d8cbd658f9e5478b6f96440b806
+
+I was able to knit without issues
+
+I encountered that my partner did not commit to the main branch. I was unable to see the files initially because the main branch is default.
